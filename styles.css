@@ -1,0 +1,85 @@
+/* retournement de la carte*/
+*, ::before, ::after 
+{
+    box-sizing: border-box;
+}
+ h1, p {
+     color: white;
+     margin: 0;
+ }
+
+/* entire container, keeps perspective */
+.flip-container {
+    perspective: 1000px;
+    margin-bottom: 5px;
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+}
+  
+  /* flip the pane when clicked */
+  .rotate .tourne {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-container, .front, .back {
+    height: 200px;
+  }
+  
+  /* flip speed goes here */
+  .flipper
+{
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    height: 100%;  
+    display: flex;
+    flex-direction: column;
+}
+.flipper p{
+    font-weight: bold;
+}
+  
+  /* hide back of pane during swap */
+  .front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* front pane, placed above back */
+  .front {
+    z-index: 2;
+    padding-top: 10px;
+    transform: rotateY(0deg);
+    width: 100%;
+  }
+  
+  /* back, initially hidden pane */
+  .back {
+    transform: rotateY(180deg);
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .description
+  {
+      margin-top: 10px;
+      margin-bottom:5px
+  }
+
+  .img{
+      width: 35%;
+  }
+
+  .name{
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+  
