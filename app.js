@@ -42,7 +42,7 @@ function getFullPokemon(pokemon){
 
                         tableauFin = allPokemon.sort((a,b)=> {
                             return a.id - b.id
-                        }).splice(0,21)
+                        })
 
                         createCard(tableauFin)
                     }   
@@ -178,15 +178,14 @@ function createCard(arr){
 }
 
 // infini scroll
+// window.addEventListener('scroll', ()=>{
+//     console.log("dfghjklm")
+//     const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
 
-window.addEventListener('scroll', ()=>{
-    console.log("dfghjklm")
-    const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
-
-    if(clientHeight + scrollTop >= scrollHeight - 20) {
-        addPokemon(20)
-    }
-});
+//     if(clientHeight + scrollTop >= scrollHeight - 20) {
+//         addPokemon(20)
+//     }
+// });
 
 let index = 21
 
