@@ -171,7 +171,8 @@ function createCard(arr){
         function flipCard(){
             console.log("xcvgbhjk")
             card.classList.toggle("rotate")
-            const wrapcard = document.getElementById(i+"_wrap")
+            const wrapId = i +"_wrap"
+            const wrapcard = document.getElementById(wrapId)
             wrapcard.classList.toggle("tourne")
         }
     }
